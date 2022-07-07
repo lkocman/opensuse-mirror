@@ -1,0 +1,6 @@
+# /etc/cron.d/opensuse_mirror: crontab entries for openSUSE Mirror
+# https://en.opensuse.org/openSUSE:Mirror_howto
+
+0 * * * * /root/mirror-sync.sh
+# Please preserve newline at the end
+

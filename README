@@ -1,0 +1,7 @@
+This template is the ideal starting ground to build a single-purpose container using Dockerfile.
+
+Just fill out the places indicated by the comments in the Dockerfile and _service files to get
+started, then run osc vc (or use the web interface) to create a .changes file.
+
+Compared to the container image template using kiwi, this (usually) requires use of a base image
+with a package manager.

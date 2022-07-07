@@ -1,0 +1,21 @@
+-------------------------------------------------------------------
+Sat Jul  2 20:02:23 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use correct cron arguments
+
+-------------------------------------------------------------------
+Thu Jun 30 19:44:03 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use 15 SP4 BCI as a base
+
+-------------------------------------------------------------------
+Thu Jun 30 19:16:17 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use entrypoint.sh
+  run crond as mirror 
+
+-------------------------------------------------------------------
+Thu Jun 30 16:31:59 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Initial version
+  https://hackweek.opensuse.org/21/projects/home-mirror-101-refresh-of-hotstuff
