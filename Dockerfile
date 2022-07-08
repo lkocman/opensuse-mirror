@@ -1,5 +1,5 @@
 # Define the names/tags of the container
-#!BuildTag: opensuse/lkocman-mirror:latest opensuse/lkocman-mirror:0.9 opensuse/lkocman-mirror:0.9.%RELEASE%
+#!BuildTag: opensuse/opensuse-mirror:latest opensuse/opensuse-mirror:0.9 opensuse/opensuse-mirror:0.9.%RELEASE%
 
 FROM opensuse/leap:15.4
 
@@ -7,24 +7,24 @@ FROM opensuse/leap:15.4
 # labelprefix=org.opensuse.example
 PREFIXEDLABEL org.opencontainers.image.title="openSUSE Mirror"
 PREFIXEDLABEL org.opencontainers.image.description="Simple to deploy home mirror in a container 0.9"
-PREFIXEDLABEL org.opensuse.reference="registry.opensuse.org/opensuse/lkocman-mirror:0.9.%RELEASE%"
+PREFIXEDLABEL org.opensuse.reference="registry.opensuse.org/opensuse/opensuse-mirror:0.9.%RELEASE%"
 PREFIXEDLABEL org.openbuildservice.disturl="%DISTURL%"
 PREFIXEDLABEL org.opencontainers.image.created="%BUILDTIME%"
 
 USER root
 WORKDIR /root
 
-# processed in mirror-sync.sh
+# All profiles are listed here
+# https://github.com/openSUSE/opensuse-hotstuff/tree/main/etc/rsyncd.d
+# https://mirrors.opensuse.org/list/rsyncinfo-stage.o.o.txt
+# ENV is processed by mirror-sync.sh
 ARG mirror_module=opensuse-full
 ENV MIRROR_MODULE=$mirror_module
 
-# Fill the image with content and clean the cache(s)
-# todo figure our replacement for stcap -> libcap-progs
 RUN zypper --non-interactive in rsync nginx cron cronie withlock python && zypper clean -a
 
 COPY nginx.conf /etc/nginx
 
-# https://mirrors.opensuse.org/list/rsyncinfo-stage.o.o.txt
 COPY mirror-sync.sh /root/mirror-sync.sh
 COPY mirror-exclude.lst /root/mirror-exclude.lst
 COPY entrypoint.sh /root/entrypoint.sh

@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Jul  8 19:21:06 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use opensuse-mirror instead of lkocman-mirror
+  * Ensure list of modules is included in Dockerfile
+  * Cleanup comments in Dockerfile
+  * Reference picture in README.md
+
+-------------------------------------------------------------------
 Fri Jul  8 19:11:44 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
 
 - Randomize sync times random time during the day
