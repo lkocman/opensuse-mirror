@@ -14,6 +14,10 @@ PREFIXEDLABEL org.opencontainers.image.created="%BUILDTIME%"
 USER root
 WORKDIR /root
 
+# processed in mirror-sync.sh
+ARG mirror_module=opensuse-full
+ENV MIRROR_MODULE=$mirror_module
+
 # Fill the image with content and clean the cache(s)
 # todo figure our replacement for stcap -> libcap-progs
 RUN zypper --non-interactive in rsync nginx cron cronie withlock python && zypper clean -a
