@@ -24,12 +24,7 @@ https://documentation.suse.com/sle-micro/5.2/single-html/SLE-Micro-administratio
 * Container will initiate sync of the selected module on the first start (check for /srv/pub/opensuse being empty)
 * The mirror will be then re-synced daily via a cronjob at a random time of the day (by using RANDOM_DELAY=1380 minutes)
 
-<p align="center">
-    <img
-        src="https://user-images.githubusercontent.com/510119/178058554-4bc92469-8e27-4395-8042-e37ad3a101b0.png"
-        height="400"
-        alt="Execution args for opensuse-container image in cockpit" />
-</p>
+![Run image in cockpit](https://user-images.githubusercontent.com/510119/178058554-4bc92469-8e27-4395-8042-e37ad3a101b0.png)
 
 
 As mentioned above, if you'd have a space budget, you can choose one of the hot stuff rsync
