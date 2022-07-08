@@ -1,7 +1,34 @@
-This template is the ideal starting ground to build a single-purpose container using Dockerfile.
+# Welcome to simple to deploy opensuse home mirror container
 
-Just fill out the places indicated by the comments in the Dockerfile and _service files to get
-started, then run osc vc (or use the web interface) to create a .changes file.
+You might want to consider also looking into https://github.com/Firstyear/opensuse-proxy-cache
+if you're on a tight space budget.
 
-Compared to the container image template using kiwi, this (usually) requires use of a base image
-with a package manager.
+
+## Few clicks deployment
+
+I'm using RaspPi 4 8Gb with 1TB SSD connected via USB with a clean install of Leap Micro 5.2 managed by a cockpit web interface.
+https://documentation.suse.com/sle-micro/5.2/single-html/SLE-Micro-administration/#sec-admin-cockpit
+
+* Simply access cockpit by https://$IPADDR:9090
+* Go to podman containers and enable podman unless it's already enabled
+* Click on Get new image
+* Lookup lkocman-mirror
+  *  Full URL registry.opensuse.org/home/lkocman/branches/opensuse/templates/images/15.4/containers/opensuse/lkocman-mirror
+* 
+
+I do recommend using a volume for /srv/pub/opensuse
+See https://docs.docker.com/storage/volumes/
+
+If you'd have a space budget, you can choose one of the hot stuff rsync modules by specifying:
+
+```podman build --build-arg mirror_module=opensuse-hotstuff-160gb```
+
+I plan to revisit and refresh these modules or utilize the exclude list which 
+what I have been personally using at home.
+
+Default mirror_module is opensuse-full, which will consume a few TB of space.
+
+
+A full list of rsync modules is available at
+
+https://github.com/openSUSE/opensuse-hotstuff/tree/main/etc/rsyncd.d

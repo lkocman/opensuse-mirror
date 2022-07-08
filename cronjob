@@ -1,6 +1,9 @@
 # /etc/cron.d/opensuse_mirror: crontab entries for openSUSE Mirror
 # https://en.opensuse.org/openSUSE:Mirror_howto
+# RANDOM_DELAY 23x60=1380 minutes ensures that your mirror
+# starts to sync at a random time of the day
 
-0 * * * * /root/mirror-sync.sh
+RANDOM_DELAY=1380
+0 0 * * * /root/mirror-sync.sh
 # Please preserve newline at the end
 
