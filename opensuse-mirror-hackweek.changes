@@ -1,4 +1,24 @@
 -------------------------------------------------------------------
+Fri Jul  8 15:28:46 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Fix paths in mirror-sync.sh (use /root)
+
+-------------------------------------------------------------------
+Fri Jul  8 13:31:37 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Withlock require explicitly old python boo#1201336
+
+-------------------------------------------------------------------
+Fri Jul  8 12:10:00 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Make sure our *.sh scripts are executable
+
+-------------------------------------------------------------------
+Fri Jul  8 10:27:16 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use root remove chmod remains
+
+-------------------------------------------------------------------
 Sat Jul  2 20:02:23 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
 
 - Use correct cron arguments
@@ -12,7 +32,7 @@ Thu Jun 30 19:44:03 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
 Thu Jun 30 19:16:17 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
 
 - Use entrypoint.sh
-  run crond as mirror 
+  run crond as mirror
 
 -------------------------------------------------------------------
 Thu Jun 30 16:31:59 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
