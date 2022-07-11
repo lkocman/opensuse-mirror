@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Mon Jul 11 10:27:50 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
+
+- Use stage server with opensuse-hotstuff-hackweek as a default 
+
+-------------------------------------------------------------------
 Fri Jul  8 19:21:06 UTC 2022 - Lubos Kocman <lubos.kocman@suse.com>
 
 - Use opensuse-mirror instead of lkocman-mirror

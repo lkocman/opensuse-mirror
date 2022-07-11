@@ -20,7 +20,7 @@ https://documentation.suse.com/sle-micro/5.2/single-html/SLE-Micro-administratio
 * Set forwarding from host's port :80 to container's nginx port :8080
 * I do recommend using a [volume](https://docs.docker.com/storage/volumes/) for /srv/pub/opensuse
 * Choose the [rsync module] (https://mirrors.opensuse.org/list/rsyncinfo-stage.o.o.txt rsync module)
-  which you'd like to mirror **the default is mirror_module is opensuse-full**. opensuse-full can easily consume few TB of space.
+  which you'd like to mirror **the default is mirror_module is opensuse-hotstuff-hackweek**. The full 'opensuse-full' can easily consume few TB of space.
 * Container will initiate sync of the selected module on the first start (check for /srv/pub/opensuse being empty)
 * The mirror will be then re-synced daily via a cronjob at a random time of the day (by using RANDOM_DELAY=1380 minutes)
 
@@ -32,6 +32,4 @@ modules by specifying --build-args or simply passing "mirror_module" and "opensu
 as Key/Value Environment pair in Cockpit's podman web management.
 
 I plan to revisit and refresh these [hostuff modules](https://github.com/openSUSE/opensuse-hotstuff/tree/main/etc/rsyncd.d) or utilize the exclude list which
-what I have been personally using at home.
-
-Default mirror_module is opensuse-full, which will consume a few TB of space.
+what I have been personally using at home. 

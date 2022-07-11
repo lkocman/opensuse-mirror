@@ -18,7 +18,8 @@ WORKDIR /root
 # https://github.com/openSUSE/opensuse-hotstuff/tree/main/etc/rsyncd.d
 # https://mirrors.opensuse.org/list/rsyncinfo-stage.o.o.txt
 # ENV is processed by mirror-sync.sh
-ARG mirror_module=opensuse-full
+#ARG mirror_module=opensuse-full
+ARG mirror_module=opensuse-hotstuff-hackweek
 ENV MIRROR_MODULE=$mirror_module
 
 RUN zypper --non-interactive in rsync nginx cron cronie withlock python && zypper clean -a
