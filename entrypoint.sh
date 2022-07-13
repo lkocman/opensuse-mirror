@@ -7,4 +7,4 @@ cron
 [ "$(ls -A /srv/pub/opensuse)" ] && echo "Skipping sync tree is not empty." || (/root/mirror-sync.sh &)
 
 # Start application.
-nginx -g 'daemon off;'
+exec "nginx -g 'daemon off;'"
