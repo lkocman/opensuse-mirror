@@ -1,7 +1,7 @@
 # Define the names/tags of the container
 #!BuildTag: opensuse/opensuse-mirror:latest opensuse/opensuse-mirror:0.9 opensuse/opensuse-mirror:0.9.%RELEASE%
 
-FROM opensuse/leap:15.5
+FROM opensuse/tumbleweed
 
 # Define labels according to https://en.opensuse.org/Building_derived_containers
 # labelprefix=org.opensuse.example
